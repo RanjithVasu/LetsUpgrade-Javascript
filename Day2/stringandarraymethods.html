@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<p><b>Method 1.</b><br>The length property returns the length of a string:</p>
+
+<p id="demo"></p>
+
+<script>
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("demo").innerHTML = txt.length;
+</script>
+
+<p><b>Method 2.</b><br>The indexOf() method returns the position of the first occurrence of a specified text:</p>
+
+<p id="demo1"></p>
+
+<script>
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate");
+document.getElementById("demo1").innerHTML = pos;
+</script>
+
+<p><b>Method 3.</b><br>The slice() method extract a part of a string
+    and returns the extracted parts in a new string:</p>
+    
+    <p id="demo2"></p>
+    
+    <script>
+    var str = "Apple, Banana, Kiwi";
+    var res = str.slice(7,13);
+    document.getElementById("demo2").innerHTML = res; 
+    </script>
+
+<p><b>Method 4.</b><br>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo3">Please visit Microsoft!</p>
+
+<script>
+function myFunction() {
+  var str = document.getElementById("demo3").innerHTML; 
+  var txt = str.replace("Microsoft","W3Schools");
+  document.getElementById("demo3").innerHTML = txt;
+}
+</script>
+
+<p><b>Method 5.</b><br>Convert string to upper case:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo4">Hello World!</p>
+
+<script>
+function myFunction() {
+  var text = document.getElementById("demo4").innerHTML;
+  document.getElementById("demo4").innerHTML = text.toUpperCase();
+}
+</script>
+
+<p><b>Method 6.</b><br>Click the button to alert the string with removed whitespace.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p><strong>Note:</strong> The trim() method is not supported in Internet Explorer 8 and earlier versions.</p>
+
+<script>
+function myFunction() {
+  var str = "     Hello World!     ";
+  alert(str.trim());
+}
+</script>
+
+<p><b>Method 7.</b><br>The charAt() method returns the character at a given position in a string:</p>
+
+<p id="demo5"></p>
+
+<script>
+var str = "HELLO WORLD";
+document.getElementById("demo5").innerHTML = str.charAt(0);
+</script>
+
+<h2>JavaScript Array Methods</h2> 
+
+<h2><b>Method 1.</b><br>toString()</h2>
+
+<p>The toString() method returns an array as a comma separated string:</p>
+
+<p id="demo6"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo6").innerHTML = fruits.toString();
+</script>
+
+<h2><b>Method 2.</b><br>pop()</h2>
+
+<p>The pop() method removes the last element from an array.</p>
+
+<p id="demo7"></p>
+<p id="demo8"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo7").innerHTML = fruits;
+fruits.pop();
+document.getElementById("demo8").innerHTML = fruits;
+</script>
+
+<h2><b>Method 3.</b><br>push()</h2>
+
+<p>The push() method appends a new element to an array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo9"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo9").innerHTML = fruits;
+
+function myFunction() {
+  fruits.push("Kiwi");
+  document.getElementById("demo9").innerHTML = fruits;
+}
+</script>
+
+<h2><b>Method 4.</b><br>splice()</h2>
+
+<p>The splice() method adds new elements to an array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo10"></p>
+<p id="demo11"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo10").innerHTML = "Original Array:<br>" + fruits;
+function myFunction() {
+  fruits.splice(2, 0, "Lemon", "Kiwi");
+  document.getElementById("demo11").innerHTML = "New Array:<br>" + fruits;
+}
+</script>
+</body>
+</html>
