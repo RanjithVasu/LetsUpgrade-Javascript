@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>
+        Split a number into individual
+        digits using JavaScript
+    </title>
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            color: green;
+        }
+
+        #geeks {
+            color: green;
+            font-size: 29px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>LetsUpgrade</h1>
+
+    <p>
+        Type the value and click on the button
+        to perform the operation.
+    </p>
+
+    Type here:<input id="input" />
+
+    <br><br>
+
+    <button onclick="SplitNameVersion();">
+        click here
+    </button>
+
+    <p id="data"></p>
+
+    <script>
+        var str = document.getElementById('data');
+
+        function SplitNameVersion() {
+            var str = document.getElementById('input').value;
+            var array = str.split(" ");
+            document.write("The OS name is "+array[0]+" and version is "+array[1]);
+            console.log("The OS name is "+array[0]+" and version is "+array[1])
+        } 
+    </script>
+</body>
+
+</html>
